@@ -5,12 +5,14 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "reset-cache": "watchman watch-del-all && rm -rf /tmp/metro-bundler-cache-* && rm -rf /tmp/haste-map-react-native-packager-*"
+    "reset-cache": "watchman watch-del-all && rm -rf /tmp/metro-bundler-cache-* && rm -rf /tmp/haste-map-react-native-packager-*",
+    "bundle:ios:dev": "node node_modules/react-native/local-cli/cli.js bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=true --platform='ios' --assets-dest='./ios'"
   },
   "dependencies": {
     "lottie-react-native": "^2.5.8",
     "react": "16.5.0",
-    "react-native": "0.57.0"
+    "react-native": "0.57.0",
+    "react-navigation": "^2.16.0"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
